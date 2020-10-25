@@ -1,0 +1,29 @@
+# CONSTANTS
+TITLE = "Pyramid Solitaire"
+FONT_NAME = "arial"
+
+CARD_WIDTH = 86
+CARD_HEIGHT = 122
+HALF_CARD_WIDTH = CARD_WIDTH / 2
+HALF_CARD_HEIGHT = CARD_HEIGHT / 2
+STACK1_X_COORD = 10
+STACK1_Y_COORD = 10
+PYRAMID_X_COORD = 445
+PYRAMID_Y_COORD = 100
+
+DISCARD_X_COORD = 700
+DISCARD_Y_COORD = 50
+
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+LIGHT_BLUE = (215, 230, 255)
+SCREEN_DIMENSIONS = (800, 600)
+FPS = 60
+
+# Lists
+
+
+royals = ["J", "Q", "K", "A"]
+suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
+
+HS_FILE = "high_score.txt"
