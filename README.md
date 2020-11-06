@@ -5,7 +5,10 @@
 * [About the Project](#about-the-project)
 * [Screenshots](#screenshots)
 * [Installation](#installation)
-* [How To Playe](#how-to-play)
+* [How To Play](#how-to-play)
+
+
+## About the Project
 
 
 <!-- Screenshots -->
