@@ -5,7 +5,7 @@
 * [About the Project](#about-the-project)
 * [Screenshots](#screenshots)
 * [Installation](#installation)
-* [Usage](#usage)
+* [How To Playe](#how-to-play)
 
 
 <!-- Screenshots -->
@@ -25,4 +25,4 @@ To install the app, double click the zip file, save it and then extract the exec
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## How To Play
