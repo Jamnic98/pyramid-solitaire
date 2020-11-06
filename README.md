@@ -3,14 +3,9 @@
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
-* [About the Project](#about-the-project)
 * [Screenshots](#screenshots)
 * [Installation](#installation)
 * [How To Play](#how-to-play)
-
-
-<!-- ABOUT THE PROJECT -->
-## About the Project
 
 
 <!-- Screenshots -->
