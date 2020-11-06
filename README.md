@@ -15,8 +15,7 @@
 
 <!-- Screenshots -->
 ## Screenshots
-### The app (on start-up):
-![2020-11-06 (13)](https://user-images.githubusercontent.com/44094740/98413813-33105100-2072-11eb-852a-1222e945d6ea.png)
+![Pyramid Solitaire (on start-up)](https://user-images.githubusercontent.com/44094740/98413813-33105100-2072-11eb-852a-1222e945d6ea.png)
 
 
 <!-- How to install the program -->
