@@ -11,14 +11,17 @@
 <!-- Screenshots -->
 ## Screenshots
 ### The app (on start-up):
-![LCC](https://user-images.githubusercontent.com/44094740/98406966-c2b00280-2066-11eb-8773-5f855aa8fdbf.png) 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 
+<!-- How to install the program -->
 ## Installation
+To install the app, double click the zip file, save it and then extract the executable before running.
+
+[Pyramid Solitaire.zip](https://github.com/Jamnic98/pyramid-solitaire/files/5503443/Pyramid.Solitaire.zip)
 
 
 <!-- USAGE EXAMPLES -->
