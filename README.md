@@ -17,6 +17,9 @@
 ## Screenshots
 ![Pyramid Solitaire (on start-up)](https://user-images.githubusercontent.com/44094740/98413813-33105100-2072-11eb-852a-1222e945d6ea.png)
 
+### Demo:
+GIF Screen Recorder
+
 
 <!-- How to install the program -->
 ## Installation
