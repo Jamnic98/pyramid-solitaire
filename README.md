@@ -12,12 +12,11 @@
 <!-- Screenshots -->
 ## Screenshots
 
+### Gameplay demo:
+![Pyramid Solitaire Gameplay Demo](https://user-images.githubusercontent.com/44094740/98440811-d6a14600-20f2-11eb-9559-9411dc4283c9.gif)
+
 ### Start animation:
-![Pyramid Solitaire Demo](https://user-images.githubusercontent.com/44094740/98415431-3527df00-2075-11eb-8c31-31d25e96e5c7.gif)
-
-### Mid game:
-![Pyramid Solitaire Mid Game](https://user-images.githubusercontent.com/44094740/98440222-82489700-20ef-11eb-9742-f219a0c1ff40.png)
-
+![Pyramid Solitaire Starting Animation](https://user-images.githubusercontent.com/44094740/98440806-cb4e1a80-20f2-11eb-982f-f9fab61ebea0.gif)
 
 <!-- How to install the program -->
 ## Installation
