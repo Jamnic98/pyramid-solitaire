@@ -36,9 +36,7 @@ Possible card pairings are listed below:
 ## Installation
 To install the app, double click the zip file, save it and then extract the executable before running.
 
-[Pyramid Solitaire.zip](https://github.com/Jamnic98/pyramid-solitaire/files/5503443/Pyramid.Solitaire.zip)
-
-
+[Pyramid Solitaire.zip](https://github.com/Jamnic98/pyramid-solitaire/files/5504995/Pyramid.Solitaire.zip)
 
 
 <!-- Technologies used in development -->
