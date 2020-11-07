@@ -6,7 +6,7 @@
 * [Screenshots](#screenshots)
 * [Installation](#installation)
 * [How To Play](#how-to-play)
-
+* [Technologies](#technologies)
 
 <!-- Screenshots -->
 ## Screenshots
@@ -23,5 +23,11 @@ To install the app, double click the zip file, save it and then extract the exec
 [Pyramid Solitaire.zip](https://github.com/Jamnic98/pyramid-solitaire/files/5503443/Pyramid.Solitaire.zip)
 
 
-<!-- USAGE EXAMPLES -->
+<!-- Usage -->
 ## How To Play
+
+
+<!-- Technologies used in development -->
+## Technologies
+* Python 3.8
+* Pygame 1.9.6
