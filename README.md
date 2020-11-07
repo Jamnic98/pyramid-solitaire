@@ -1,5 +1,5 @@
 # Pyramid Solitaire
-> A program based on a variation of the game solitaire.
+> A program based on a variation of the card game, solitaire.
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
