@@ -20,9 +20,6 @@ LIGHT_BLUE = (215, 230, 255)
 SCREEN_DIMENSIONS = (800, 600)
 FPS = 60
 
-# Lists
-
-
 royals = ["J", "Q", "K", "A"]
 suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
 
