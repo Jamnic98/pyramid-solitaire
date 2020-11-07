@@ -8,12 +8,15 @@
 * [How To Play](#how-to-play)
 * [Technologies](#technologies)
 
+
 <!-- Screenshots -->
 ## Screenshots
-![Pyramid Solitaire (on start-up)](https://user-images.githubusercontent.com/44094740/98413813-33105100-2072-11eb-852a-1222e945d6ea.png)
 
 ### Start animation:
 ![Pyramid Solitaire Demo](https://user-images.githubusercontent.com/44094740/98415431-3527df00-2075-11eb-8c31-31d25e96e5c7.gif)
+
+### Mid game:
+![Pyramid Solitaire Mid Game](https://user-images.githubusercontent.com/44094740/98440222-82489700-20ef-11eb-9742-f219a0c1ff40.png)
 
 
 <!-- How to install the program -->
