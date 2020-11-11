@@ -30,7 +30,8 @@ Possible card pairings are listed below:
 ![Pyramid Solitaire Gameplay Demo](https://user-images.githubusercontent.com/44094740/98440811-d6a14600-20f2-11eb-9559-9411dc4283c9.gif)
 
 ### Start animation:
-![Pyramid Solitaire Starting Animation](https://user-images.githubusercontent.com/44094740/98440806-cb4e1a80-20f2-11eb-982f-f9fab61ebea0.gif)
+![Pyramid Solitaire Animation Demo](https://user-images.githubusercontent.com/44094740/98865468-54eb4880-2463-11eb-8094-09e59862ab28.gif)
+
 
 <!-- How to install the program -->
 ## Installation
