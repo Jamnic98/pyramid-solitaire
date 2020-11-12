@@ -3,11 +3,20 @@
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
-* [How To Play](#how-to-play)
 * [Screenshots](#screenshots)
+* [How To Play](#how-to-play)
 * [Installation](#installation)
-
 * [Technologies](#technologies)
+
+
+<!-- Screenshots -->
+## Screenshots
+
+### Gameplay demo:
+![Pyramid Solitaire Gameplay Demo](https://user-images.githubusercontent.com/44094740/98440811-d6a14600-20f2-11eb-9559-9411dc4283c9.gif)
+
+### Start animation:
+![Pyramid Solitaire Animation Demo](https://user-images.githubusercontent.com/44094740/98865468-54eb4880-2463-11eb-8094-09e59862ab28.gif)
 
 
 <!-- Usage -->
@@ -21,16 +30,6 @@ Possible card pairings are listed below:
 * 4 and 9
 * 5 and 8
 * 6 and 7
-
-
-<!-- Screenshots -->
-## Screenshots
-
-### Gameplay demo:
-![Pyramid Solitaire Gameplay Demo](https://user-images.githubusercontent.com/44094740/98440811-d6a14600-20f2-11eb-9559-9411dc4283c9.gif)
-
-### Start animation:
-![Pyramid Solitaire Animation Demo](https://user-images.githubusercontent.com/44094740/98865468-54eb4880-2463-11eb-8094-09e59862ab28.gif)
 
 
 <!-- How to install the program -->
