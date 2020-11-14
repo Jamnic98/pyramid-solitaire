@@ -6,7 +6,7 @@
 * [Screenshots](#screenshots)
 * [How To Play](#how-to-play)
 * [Installation](#installation)
-* [Technologies](#technologies)
+* [Built with](#built-with)
 
 
 <!-- Screenshots -->
@@ -40,6 +40,6 @@ To install the app, double click the zip file, save it and then extract the exec
 
 
 <!-- Technologies used in development -->
-## Technologies
+## Built with
 * Python 3.8
 * Pygame 1.9.6
