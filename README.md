@@ -35,7 +35,8 @@ Possible card pairings are listed below:
 
 <!-- How to install the program -->
 ## Installation
-To install the app, double click the zip file, save it and then extract the executable before running. Note that the 'data' file must be kept in the same folder as the executable for the executable to run.
+To install the app, double click the zip file, save it and then extract the files before running. 
+Note that the 'data' file must be kept in the same folder as the executable for the executable to run.
 
 [Pyramid Solitaire.zip](https://github.com/Jamnic98/scrabble-scorekeeper/files/5553422/Pyramid.Solitaire.zip)
 
