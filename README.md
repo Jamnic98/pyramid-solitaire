@@ -42,6 +42,7 @@ From the command line, run the following set of instructions:
 4. `cd Scripts && activate`
 5. `pip install pygame`
 6. `cd ../ && python pyramid_solitaire.py`
+
 Remember to deactivate the virtual environment when finished by running the command:
 `cd Scripts && deactivate`
 
