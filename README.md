@@ -5,7 +5,7 @@
 ## Table of Contents
 * [Screenshots](#screenshots)
 * [How To Play](#how-to-play)
-* [Installation](#installation)
+* [Installation](#installation-on-windows)
 * [Built with](#built-with)
 
 
@@ -34,11 +34,18 @@ Possible card pairings are listed below:
 
 
 <!-- How to install the program -->
-## Installation
-To install the app, double click the zip file, save it and then extract the files before running. 
-Note that the 'data' file must be kept in the same folder as the executable for the executable to run.
-
-[Pyramid Solitaire.zip](https://github.com/Jamnic98/scrabble-scorekeeper/files/5553422/Pyramid.Solitaire.zip)
+## Installation (on Windows)
+From the command line, run the following set of instructions:
+```
+git clone https://github.com/Jamnic98/pyramid-solitaire.git
+cd ./pyramid-solitaire
+python -m venv ./
+cd Scripts && activate
+pip install pygame
+cd ../ && python pyramid_solitaire.py
+```
+Remember to deactivate the virtual environment when finished by running the command:
+`cd Scripts && deactivate`
 
 
 <!-- Technologies used in development -->
