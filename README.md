@@ -36,14 +36,12 @@ Possible card pairings are listed below:
 <!-- How to install the program -->
 ## Installation (on Windows)
 From the command line, run the following set of instructions:
-```
-git clone https://github.com/Jamnic98/pyramid-solitaire.git
-cd ./pyramid-solitaire
-python -m venv ./
-cd Scripts && activate
-pip install pygame
-cd ../ && python pyramid_solitaire.py
-```
+1. `git clone https://github.com/Jamnic98/pyramid-solitaire.git`
+2. `cd ./pyramid-solitaire`
+3. `python -m venv ./`
+4. `cd Scripts && activate`
+5. `pip install pygame`
+6. `cd ../ && python pyramid_solitaire.py`
 Remember to deactivate the virtual environment when finished by running the command:
 `cd Scripts && deactivate`
 
