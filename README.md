@@ -1,14 +1,6 @@
 # Pyramid Solitaire
 > A program based on a variation of the card game, solitaire.
 
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-* [Screenshots](#screenshots)
-* [How To Play](#how-to-play)
-* [Installation](#installation-on-windows)
-* [Built with](#built-with)
-
-
 <!-- Screenshots -->
 ## Screenshots
 
