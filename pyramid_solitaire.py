@@ -5,19 +5,16 @@ import random
 
 
 class Game:
-
     def __init__(self):
-        """A method to initialize the games starting conditions"""
         pg.init()
         self.file_dir = path.dirname(__file__)
         self.data_dir = path.join(self.file_dir, "data")
         self.img_dir = path.join(self.data_dir, "images")
-
         self.cards_img_dir = path.join(self.img_dir, "cards")
         self.outlined_cards_img_dir = path.join(self.img_dir, "cards_outlined")
+        self.card_back = pg.image.load(path.join(self.img_dir, "card_back.png"))
         game_icon = pg.image.load(path.join(self.img_dir, "game_icon.png"))
         pg.display.set_icon(game_icon)
-        self.card_back = pg.image.load(path.join(self.img_dir, "card_back.png"))
         self.game_window = pg.display.set_mode(SCREEN_DIMENSIONS)
         self.font_name = pg.font.match_font(FONT_NAME)
         pg.display.set_caption(TITLE)
@@ -31,7 +28,7 @@ class Game:
         self.card_identifier = []
         self.deck = []
         self.array = []
-        # Initialize all groups
+        # Init groups
         self.all_sprites = pg.sprite.Group()
         self.stack1 = pg.sprite.Group()
         self.stack2 = pg.sprite.Group()
@@ -60,28 +57,28 @@ class Game:
         self.pyramid_coord_array()
 
     def create_deck(self):
+        # create list of unique identifier strings for each card
         self.deck.clear()
+        # face values
         for a in range(2, 11):
             self.card_identifier.append(str(a))
-
+        # A, K, Q, J
         for b in range(4):
             self.card_identifier.append(royals[b])
-
+        
         for card in range(4):
-
             for d in range(13):
                 self.deck.append((self.card_identifier[d] + "of" + suits[card]))
 
         random.shuffle(self.deck)
 
     def pyramid_coord_array(self):
-        x_coord = PYRAMID_X_COORD
-        y_coord = PYRAMID_Y_COORD
+        x_coord, y_coord = PYRAMID_X_COORD, PYRAMID_Y_COORD
         self.array.append((int(x_coord), int(y_coord)))
+        
         f = 0
         row_number = 1
         while row_number < 7:
-
             x_coord -= (CARD_WIDTH * (f + 2) - CARD_WIDTH / 2)
             y_coord += CARD_HEIGHT / 2
 
@@ -91,11 +88,9 @@ class Game:
             while e < row_number:
                 x_coord += CARD_WIDTH
                 e += 1
-
                 self.array.append((int(x_coord), int(y_coord)))
 
     def load_data(self):
-
         with open(path.join(self.data_dir, HS_FILE), 'r') as f:
             try:
                 self.high_score = int(f.read())
@@ -104,7 +99,7 @@ class Game:
                 self.high_score = 0
 
     def new(self):
-        """A method to reset the game and run again"""
+        # reset game then rerun
         pg.mouse.set_cursor(*pg.cursors.arrow)
         self.score = 0
         self.card_sum = 0
@@ -124,7 +119,6 @@ class Game:
         self.run()
 
     def run(self):
-        """Method to call other methods that make the game run"""
         self.playing = True
         while self.playing:
             dt = self.clock.tick(FPS)
@@ -134,7 +128,7 @@ class Game:
             self.draw()
 
     def events(self):
-        """Check for player input."""
+        # game loop
         for event in pg.event.get():
             # exit game event
             if event.type == pg.QUIT or (event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE):
@@ -146,14 +140,13 @@ class Game:
             elif event.type == pg.MOUSEBUTTONDOWN:
                 for card in self.all_sprites:
                     if card.rect.collidepoint(pg.mouse.get_pos()):
-
                         if card in self.pyramid:
                             collide = pg.sprite.spritecollide(card, self.next_row[card.row_number], False)
                             if len(collide) == 0:
                                 self.process_sprite(card)
                                 return
 
-                        # The top card in stack1 has been clicked
+                        # top card in stack1 has been clicked
                         elif card in self.stack1:
                             top_card_in_stack1 = self.stack1.sprites()[len(self.stack1.sprites()) - 1]
                             if card == top_card_in_stack1:
@@ -164,7 +157,7 @@ class Game:
                                     return
 
                                 else:
-                                    # move the top card from the 1st stack to the top of the 2nd one
+                                    # transfer top card of stack 1 to top of stack 2
                                     self.stack1.remove(top_card_in_stack1)
                                     self.stack2.add(top_card_in_stack1)
                                     self.move_card((150 + (len(self.stack2) - 1) * 2),
@@ -176,7 +169,7 @@ class Game:
                                     self.draw()
                                     return
 
-                        # The top card in stack 2 has been clicked
+                        # top card in stack 2 has been clicked
                         elif card in self.stack2:
                             top_card_in_stack2 = self.stack2.sprites()[len(self.stack2.sprites()) - 1]
                             if card == top_card_in_stack2:
@@ -203,9 +196,7 @@ class Game:
                                     n = (10 + (len(self.stack1)) * 2)
                                     item.rect.x = n
                                     item.rect.y = n
-
                                     item.set_destination(n, n)
-
                                     self.stack1.add(item)
                                     self.stack2.remove(item)
                                     dt = self.clock.tick(FPS)
@@ -221,9 +212,7 @@ class Game:
             self.playing = False
 
     def draw(self):
-        """Method to draw sprites and text to the game window"""
-
-        # Clear game window and draw all sprites
+        # draw sprites and text to the game window
         self.game_window.fill(LIGHT_BLUE)
         if self.score > 0:
             self.game_window.blit(self.card_back, (DISCARD_X_COORD, DISCARD_Y_COORD))
@@ -243,7 +232,7 @@ class Game:
         self.game_window.blit(text_surface, text_rect)
 
     def initialize_sprites(self):
-        """Method to initialize all card sprites"""
+        # init card sprites
         pos = (STACK1_X_COORD, STACK1_Y_COORD)
 
         for index in (range(0, 52)):
@@ -259,11 +248,8 @@ class Game:
         pg.time.wait(170)
 
         for num in range(0, 28):
-
             c = self.stack1.sprites()[len(self.stack1) - 1]
-
             x, y = (self.array[num][0], self.array[num][1])
-
             c.set_vector((x, y))
 
             while c.rect.x != x and c.rect.y != y:
@@ -342,7 +328,6 @@ class Game:
                         card.image = self.card_back
 
                     self.discard_cards(self.card_pair)
-
                     self.score = self.score + 2
                     self.card_sum = 0
                     self.card_pair.clear()
@@ -357,34 +342,27 @@ class Game:
     def set_cursor(self):
 
         for sprite in self.all_sprites:
-
             if sprite.rect.collidepoint(pg.mouse.get_pos()):
-
                 if sprite in self.pyramid:
-
+                    # card is contacting no cards in row below
                     if len(pg.sprite.spritecollide(sprite, self.next_row[sprite.row_number], False)) == 0:
                         pg.mouse.set_cursor(*pg.cursors.diamond)
                         return
 
                 elif sprite in self.stack1:
-
                     top_card_in_stack1 = self.stack1.sprites()[len(self.stack1.sprites()) - 1]
-
+                    
                     if top_card_in_stack1.rect.collidepoint(pg.mouse.get_pos()):
-
                         pg.mouse.set_cursor(*pg.cursors.diamond)
                         return
-
+                    
                     else:
                         pg.mouse.set_cursor(*pg.cursors.arrow)
                         return
 
                 elif sprite in self.stack2:
-
                     top_card_in_stack2 = self.stack2.sprites()[len(self.stack2.sprites()) - 1]
-
                     if top_card_in_stack2.rect.collidepoint(pg.mouse.get_pos()):
-
                         pg.mouse.set_cursor(*pg.cursors.diamond)
                         return
 
@@ -423,6 +401,7 @@ class Game:
     def show_go_screen(self):
         if not self.running:
             return
+        
         self.draw_text("GAME OVER", 50, RED, (SCREEN_DIMENSIONS[0] // 2) + 20, 25)
         if self.score > self.high_score:
             self.draw_text("New High Score = " + str(self.score), 25, RED, (SCREEN_DIMENSIONS[0] // 2) + 20, 60)
@@ -436,13 +415,12 @@ class Game:
         self.wait_for_key()
 
     def is_game_over(self):
-
         playable_card_values = []
         stack2_card_values = []
         playable_card_values_copy = []
 
         if len(self.stack1) == 0:
-            # create an array with the playable cards in the pyramid
+            # create an array of playable cards from the pyramid
             for card in self.pyramid:
                 collide = pg.sprite.spritecollide(card, self.next_row[card.row_number], False)
                 if len(collide) == 0:
@@ -478,33 +456,33 @@ class Game:
     def move_card(self, x, y, card, speed=35):
         starting_pos = card.rect.topleft
         while card.rect.topleft != (x, y):
-
             if card.rect.x != x:
-
                 if starting_pos[0] < x:
-
                     if card.rect.x + speed >= x:
                         card.rect.x += 1
+                        
                     elif card.rect.x + speed < x:
                         card.rect.x += speed
 
                 elif starting_pos[0] > x:
                     if card.rect.x - speed <= x:
                         card.rect.x -= 1
+                        
                     elif card.rect.x - speed > x:
                         card.rect.x -= speed
 
             if card.rect.y != y:
-
                 if starting_pos[1] < y:
                     if card.rect.y + speed >= y:
                         card.rect.y += 1
+                        
                     elif card.rect.y + speed < y:
                         card.rect.y += speed
 
                 elif starting_pos[1] > y:
                     if card.rect.y - speed <= y:
                         card.rect.y -= 1
+                        
                     elif card.rect.y - speed > y:
                         card.rect.y -= speed
 
@@ -512,18 +490,13 @@ class Game:
             pg.display.flip()
 
     def discard_cards(self, cards):
-
         discard_coords = (DISCARD_X_COORD, DISCARD_Y_COORD)
-
         card1 = cards[0]
         card2 = cards[1]
-
         self.stack1.add(card1)
         self.stack1.add(card2)
-
         card1.set_vector(discard_coords)
         card2.set_vector(discard_coords)
-
         card1.flag = False
         card2.flag = False
 
